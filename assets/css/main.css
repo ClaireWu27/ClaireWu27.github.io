@@ -3671,12 +3671,17 @@ input, select, textarea {
 	.major h2,h3,h4{
 		color:skyblue
 	}
+	#project .major h2,h3,h4,p{
+		color:white !important;
+	}
 
  #project.main.style1.special {
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
-
+#main .major{
+	text-align: center !important;
+}
 
 	#certification .major {
 		text-align: center !important;
