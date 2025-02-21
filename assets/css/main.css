@@ -3713,6 +3713,8 @@ input, select, textarea {
 		opacity: 1 !important;
 		visibility: visible !important;
 	  }
+
+
 	
 	
 	 #certification .major {
@@ -3725,6 +3727,39 @@ input, select, textarea {
 	#certification p{
 		color:#5555 !important;
 	}
+/* training and certification hover effect */
+#training .image.fit, #certification .image.fit {
+	transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
+  
+  #training .image.fit:hover, #certification .image.fit:hover {
+	transform: scale(1.1) !important; 
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2) !important; 
+  }
+  
+  #training h5:hover, #certification h5:hover {
+	color: #1e90ff !important; 
+  }
+  
+
+  #training .col-4:hover, #certification .col-4:hover {
+	transform: scale(1.05) !important; 
+	transition: transform 0.3s ease !important;
+  }
+  
+  
+  #training .main, #certification .main {
+	opacity: 0 !important;
+	animation: fadeIn 1s forwards !important;
+  }
+  
+  @keyframes fadeIn {
+	to {
+	  opacity: 1 !important;
+	}
+  }
+  
+	
 
  .major h2,h3,h4,h5{
 		color:skyblue !important;
