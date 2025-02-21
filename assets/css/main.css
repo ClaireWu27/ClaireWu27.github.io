@@ -3679,6 +3679,8 @@ input, select, textarea {
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
+
+
 #main .major{
 	text-align: center !important;
 }
@@ -3689,6 +3691,36 @@ input, select, textarea {
 	#certification .main .style1{
 		padding-top: 0 !important;
 	}
+
+	#project .link {
+		position: relative !important;
+		text-decoration: none !important;		
+		font-weight: bold !important;
+	  }
+	  
+	  #project .link:hover::after {
+		content: "Click to view details" !important;
+		position: absolute !important;
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+		bottom: -20px !important;
+		background: rgba(0, 0, 0, 0.2) !important;
+		color: white !important;
+		font-size: 12px !important;
+		padding: 5px 8px !important;
+		border-radius: 5px !important;
+		white-space: nowrap !important;
+		opacity: 0 !important;
+		visibility: hidden !important;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out !important;
+	  }
+	  
+	  
+	  #project .link:hover::after {
+		opacity: 1 !important;
+		visibility: visible !important;
+	  }
+	
 
 
 
