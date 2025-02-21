@@ -3668,10 +3668,8 @@ input, select, textarea {
 	.avatar:hover {
 		transform: scale(1.1); 
 	}
-	.major h2,h3,h4{
-		color:skyblue
-	}
-	#project .major h2,h3,h4,p{
+
+	#project h3,p{
 		color:white !important;
 	}
 
@@ -3685,12 +3683,7 @@ input, select, textarea {
 	text-align: center !important;
 }
 
-	#certification .major {
-		text-align: center !important;
-	}
-	#certification .main .style1{
-		padding-top: 0 !important;
-	}
+
 
 	#project .link {
 		position: relative !important;
@@ -3721,13 +3714,29 @@ input, select, textarea {
 		visibility: visible !important;
 	  }
 	
-
-
-
-
-#education .major {
+	
+	 #certification .major {
 		text-align: center !important;
 	}
+	#certification.main.style1.special {
+		padding-top: 0 !important;
+		
+	}
+	#certification p{
+		color:#5555 !important;
+	}
+
+ .major h2,h3,h4,h5{
+		color:skyblue !important;
+	}
+
+	#education p{
+		color:black !important;
+	}
+	
+#education .major {
+	text-align: center;
+}
 .education-container {
     display: flex;
     flex-direction: column;
@@ -3743,7 +3752,7 @@ input, select, textarea {
 
 
 .education-left img {
-    width: 200px;  
+    width: 150px;  
     height: auto;
     border-radius: 10px;
 	margin-right: 100px;
