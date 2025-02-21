@@ -2010,6 +2010,12 @@ input, select, textarea {
 		text-align: center;
 		margin-top: 20px;
 	}
+	#header p{
+		font-size: 26px;
+		text-align: justify;
+		padding: 15px;
+
+	}
 
 	header p {
 		color: #999;
@@ -3032,7 +3038,7 @@ input, select, textarea {
 			}
 
 			#header .actions:after {
-				background: #ffffff;
+				
 				content: '';
 				height: 100vh;
 				left: 50%;
