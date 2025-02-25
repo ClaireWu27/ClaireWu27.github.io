@@ -1,1 +1,6 @@
+title: My GitHub Pages Site
+description: This is a sample description for my GitHub Pages site.
 theme: jekyll-theme-cayman
+baseurl: "" 
+url: "https://github.com/ClaireWu27/clairewu27.github.io"
+
