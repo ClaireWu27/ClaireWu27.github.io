@@ -4674,6 +4674,56 @@ h4,
 h5 {
   color: skyblue !important;
 }
+
+#certification .major h2 {
+  padding-top: 110px !important;
+}
+
+#project_title {
+  padding-top: 110px !important;
+}
+#education h2 {
+  padding-top: 60px !important;
+}
+#experience h2 {
+  padding-top: 20px !important;
+}
+
+/* Navigation Bar Styles */
+#navbar {
+  position: fixed; /* 固定在顶部 */
+  top: 0; /* 距离顶部为0 */
+  left: 0; /* 距离左边为0 */
+  width: 100%; /* 宽度100% */
+  background-color: #4686a0; /* 背景色 */
+  z-index: 1000; /* 确保在其他元素之上 */
+  padding: 1em 0; /* 上下内边距 */
+}
+
+/* 样式列表 */
+#navbar ul {
+  display: block; /* 设为块级元素 */
+  text-align: center; /* 居中对齐 */
+  list-style: none; /* 去掉列表样式 */
+  margin: 0; /* 去掉外边距 */
+  padding: 0; /* 去掉内边距 */
+}
+
+#navbar li {
+  display: inline-block; /* 设为行内块元素 */
+  margin: 0 1em; /* 左右内边距 */
+}
+
+#navbar a {
+  color: white; /* 字体颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  font-weight: bold; /* 加粗字体 */
+}
+
+#navbar a:hover {
+  color: #6bd4c8; /* 悬停时的颜色 */
+}
+
 /* header */
 .avatar {
   width: 150px;
@@ -4688,6 +4738,46 @@ h5 {
 .avatar:hover {
   transform: scale(1.1);
 }
+/* Navigation Bar Styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #5aa79f,
+    #59a4a1,
+    #5090ab,
+    #4a71ae,
+    #4564b2
+  );
+  z-index: 1000;
+  padding: 1em 0;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#navbar li {
+  margin: 0 1em;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: none;
+}
+
+#navbar a:hover {
+  color: #6bd4c8;
+  border-bottom: none;
+}
+
 /* project section */
 #project h3,
 p {
@@ -4704,7 +4794,6 @@ p {
   text-align: center !important;
 }
 
-/* 重置项目区域的样式 */
 #project article {
   position: relative !important;
   display: flex !important;
@@ -4713,7 +4802,6 @@ p {
   justify-content: center !important;
 }
 
-/* 确保链接覆盖整个区域 */
 #project article a.link {
   position: absolute !important;
   top: 0 !important;
@@ -4727,7 +4815,6 @@ p {
   justify-content: center !important;
 }
 
-/* 标题和描述居中 */
 #project article header.major {
   text-align: center !important;
   width: 100% !important;
