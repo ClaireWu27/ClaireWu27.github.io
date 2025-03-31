@@ -3357,24 +3357,6 @@ body.is-preload #header:after {
   margin-left: 0;
   padding: 0;
 }
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 0;
-  border-radius: 50%;
-  padding: 10px;
-  transition: transform 0.3s ease;
-}
-
-.back-to-top i {
-  font-size: 40px;
-  color: skyblue;
-}
-
-.back-to-top:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
 
 /* XLarge */
 
@@ -4682,9 +4664,7 @@ h5 {
 #project_title {
   padding-top: 110px !important;
 }
-#education h2 {
-  padding-top: 60px !important;
-}
+
 #experience h2 {
   padding-top: 20px !important;
 }
@@ -4878,91 +4858,136 @@ p {
 }
 
 /* Education Section */
-#education.main.style1 {
-  padding: 3em 0 3em 0;
-  background-color: #f4f4f9;
-}
-#education .major {
-  text-align: center;
-  margin-bottom: 2em;
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px 0;
 }
 
-.education-container {
-  display: grid;
-  gap: 2em;
-  padding: 0 2em;
+/* Timeline Entry */
+.timeline-entry {
+  position: relative;
+  margin: 35px 0;
+  padding-left: 100px;
 }
 
-.education-row {
+/* Timeline Point */
+.timeline-point {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  margin-left: 10px;
+}
+
+.education-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
 }
 
-.education-entry {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fff;
-  border-radius: 10px;
-  padding: 2em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  width: 48%;
+.school-name {
+  flex: 1;
+  font-weight: bold;
+  color: #4686a0;
+  margin: 0;
 }
 
-.education-entry:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.education-left img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1em;
-  /* border: 4px solid ; */
-}
-
-.education-right {
+.degree {
+  flex: 1;
   text-align: center;
+  margin: 0;
 }
 
-.education-right h3 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 0.5em;
+.period {
+  flex: 1;
+  text-align: right;
+  color: #777;
+  margin: 0;
 }
 
-.education-school {
-  font-size: 1rem !important;
-  color: #777 !important;
-  margin-bottom: 1em !important;
+.achievement-section {
+  margin-bottom: 1px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #eee;
+}
+.achievement-section p {
+  color: #666 !important;
+  text-align: left !important;
+  padding-left: 0;
+  font-size: 0.85rem;
+  margin: 2px 0;
 }
 
-.specification {
-  font-size: 1.1rem !important;
-  color: #444 !important;
+.coursework-section {
+  margin-bottom: 2px;
 }
 
-.education-achievement {
-  margin-bottom: 1.5em;
+.section-title {
+  color: #4686a0;
+  margin-bottom: 8px;
 }
 
-.education-achievement p {
-  font-size: 1rem !important;
-  color: #555 !important;
-}
-
-.education-right ul {
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: disc;
-  text-align: left;
-  margin-left: 20px;
-  color: #444;
+  padding-left: 20px;
+  margin: 0;
 }
 
-.education-right ul li {
-  font-size: 1rem;
+.course-list li {
+  flex: 0 0 50%;
+  margin-bottom: 2px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+}
+
+/* Style for school image */
+.timeline-point img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .education-header {
+    flex-direction: column;
+  }
+
+  .school-name,
+  .degree,
+  .period {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .course-list li {
+    flex: 0 0 100%;
+  }
 }
 
 hr {
@@ -4980,7 +5005,14 @@ hr {
     margin-bottom: 2em;
   }
 }
-
+#education .major {
+  text-align: center;
+}
+.education-key {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+}
 /* experience */
 #experience h3,
 p,
